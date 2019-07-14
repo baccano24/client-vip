@@ -109,12 +109,10 @@ const router = new Router({
             },
             {
               path: 'gl',
-              name: 'Glxx',
               component: Glxx
             },
             {
               path: 'xg/id=:id',
-              name: 'Xgxx',
               component: Xgxx,
               props: true
             }
@@ -134,12 +132,10 @@ const router = new Router({
             },
             {
               path: 'gl',
-              name: 'Glqg',
               component: Glqg
             },
             {
               path: 'xg/id=:id',
-              name: 'Xgqg',
               component: Xgqg,
               props: true
             }
@@ -159,12 +155,10 @@ const router = new Router({
             },
             {
               path: 'gl',
-              name: 'Glzp',
               component: Glzp
             },
             {
               path: 'xg/id=:id',
-              name: 'Xgzp',
               component: Xgzp,
               props: true
             }
@@ -184,12 +178,11 @@ const router = new Router({
             },
             {
               path: 'gl',
-              name: 'Gljm',
+
               component: Gljm
             },
             {
               path: 'xg/id=:id',
-              name: 'Xgjm',
               component: Xgjm,
               props: true
             }
@@ -209,12 +202,10 @@ const router = new Router({
             },
             {
               path: 'gl',
-              name: 'Glxc',
               component: Glxc
             },
             {
               path: 'xg/id=:id',
-              name: 'Xgxc',
               component: Xgxc,
               props: true
             }
@@ -222,7 +213,6 @@ const router = new Router({
         },
         {
           path: '/zsxx',
-          name: 'zsxx',
           component: zsxx,
           redirect: { path: "/zsxx/fb" },
           children: [
@@ -234,12 +224,10 @@ const router = new Router({
             },
             {
               path: 'gl',
-              name: 'Glzs',
               component: Glzs
             },
             {
               path: 'xg/id=:id',
-              name: 'Xgzs',
               component: Xgzs,
               props: true
             }
@@ -247,24 +235,21 @@ const router = new Router({
         },
         {
           path: '/qyxx',
-          name: '企业信息发布',
           component: qyxx,
           redirect: { path: "/qyxx/fb" },
           children: [
             {
               path: 'fb',
-              name: 'Fbqy',
+              name: '企业信息发布',
               component: Fbqy,
               meta: { title: '企业信息发布', noCache: true },
             },
             {
               path: 'gl',
-              name: 'Glqy',
               component: Glqy
             },
             {
               path: 'xg/id=:id',
-              name: 'Xgqy',
               component: Xgqy,
               props: true
             }
@@ -285,7 +270,6 @@ const router = new Router({
             },
             {
               path: 'detail/id=:id',
-              name: 'com_detail',
               component: com_detail,
               props: true
             }
@@ -305,7 +289,6 @@ const router = new Router({
             },
             {
               path: 'detail/id=:id',
-              name: 'pro_detail',
               component: pro_detail,
               props: true
             }
@@ -320,7 +303,7 @@ const router = new Router({
         },
         {
           path: '/lianjie',
-          name: 'lianjie',
+
           component: lianjie,
           redirect: { path: "/lianjie/xjlj" },
 
@@ -347,7 +330,6 @@ const router = new Router({
             },
             {
               path: 'id=:id',
-              name: 'XgBanner',
               component: XgBanner,
               props: true
             }
@@ -368,12 +350,12 @@ const router = new Router({
             },
             {
               path: 'xx',
-              name: 'Hyxx',
+
               component: Hyxx
             },
             {
               path: 'lianxi',
-              name: 'Hylx',
+
               component: Hylx
             }
           ]

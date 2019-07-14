@@ -68,6 +68,7 @@ export default {
       // console.log("tab",tab);
       // console.log('active',this.activeIndex);
       this.$router.push({ path: this.activeIndex });
+      console.log(1)
     },
     //移除tab标签
     tabRemove(targetName) {
@@ -103,9 +104,10 @@ export default {
       this.$store.commit("add_tabs", { route: "/home", name: "首页" });
       this.$store.commit("add_tabs", {
         route: this.$route.path,
-        name: this.$route.name
+        name: this.$route.name,
       });
       this.$store.commit("set_active_index", this.$route.path);
+      
     } else {
       this.$store.commit("add_tabs", { route: "/home", name: "首页" });
       this.$store.commit("set_active_index", "/home");
@@ -115,6 +117,7 @@ export default {
   computed: {
     openTab() {
       return this.$store.state.openTab;
+      
     },
     activeIndex: {
       get() {
@@ -122,6 +125,9 @@ export default {
       },
       set(val) {
         this.$store.commit("set_active_index", val);
+        if (this.$route.name ==null) {
+          console.log(4)
+        }
       }
     }
   },
@@ -130,6 +136,7 @@ export default {
       //判断路由是否已经打开
       //已经打开的 ，将其置为active
       //未打开的，将其放入队列里
+      
       let flag = false;
       for (let item of this.openTab) {
         if (item.name === to.name) {
@@ -137,10 +144,12 @@ export default {
           flag = true;
           break;
         }
+        
       }
       if (!flag) {
         this.$store.commit("add_tabs", { route: to.path, name: to.name });
         this.$store.commit("set_active_index", to.path);
+        
       }
     }
   }
