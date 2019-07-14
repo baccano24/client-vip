@@ -6,7 +6,7 @@
     <div class="header_you fr">
       <ul class="header_nav">
         <li>
-          <a href="https://app.tezhongzhuangbei.com/" target="_blank">手机APP{{appName}}</a>
+          <a href="https://app.tezhongzhuangbei.com/" target="_blank">手机APP</a>
         </li>
         <li>
           <a href="https://www.tezhongzhuangbei.com/" target="_blank">特种装备网</a>
@@ -114,9 +114,9 @@ export default {
     Search
   },
   computed:{
-    ...mapState({
-      appName: state=> state.test.appName
-    }),
+    // ...mapState({
+    //   appName: state=> state.test.appName
+    // }),
     // appName(){
     //   return this.$store.state.test.appName
     // }

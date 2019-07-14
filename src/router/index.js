@@ -88,7 +88,7 @@ const router = new Router({
       children: [
         {
           path: '/home',
-          name: 'Home',
+          name: '首页',
           component: Home,
           noCache: true,
           // 无法删除
@@ -103,7 +103,7 @@ const router = new Router({
           children: [
             {
               path: 'fb',
-              name: 'Fbxx',
+              name: '产品信息发布',
               component: Fbxx,
               meta: { title: '产品信息发布', noCache: true },
             },
@@ -128,7 +128,7 @@ const router = new Router({
           children: [
             {
               path: 'fb',
-              name: 'Fbqg',
+              name: '求购信息发布',
               component: Fbqg,
               meta: { title: '求购信息发布', noCache: true },
             },
@@ -153,7 +153,7 @@ const router = new Router({
           children: [
             {
               path: 'fb',
-              name: 'Fbzp',
+              name: '招聘信息发布',
               component: Fbzp,
               meta: { title: '招聘信息发布', noCache: true },
             },
@@ -178,7 +178,7 @@ const router = new Router({
           children: [
             {
               path: 'fb',
-              name: 'Fbjm',
+              name: '加盟信息发布',
               component: Fbjm,
               meta: { title: '加盟信息发布', noCache: true },
             },
@@ -203,7 +203,7 @@ const router = new Router({
           children: [
             {
               path: 'fb',
-              name: 'Fbxc',
+              name: '相册信息发布',
               component: Fbxc,
               meta: { title: '相册信息发布', noCache: true },
             },
@@ -228,7 +228,7 @@ const router = new Router({
           children: [
             {
               path: 'fb',
-              name: 'Fbzs',
+              name: '证书信息发布',
               component: Fbzs,
               meta: { title: '证书信息发布', noCache: true },
             },
@@ -247,7 +247,7 @@ const router = new Router({
         },
         {
           path: '/qyxx',
-          name: 'qyxx',
+          name: '企业信息发布',
           component: qyxx,
           redirect: { path: "/qyxx/fb" },
           children: [
@@ -279,7 +279,7 @@ const router = new Router({
           children: [
             {
               path: 'gl',
-              name: 'glCompany',
+              name: '管理公司留言',
               component: glCompany,
               meta: { title: '管理公司留言', noCache: true },
             },
@@ -299,7 +299,7 @@ const router = new Router({
           children: [
             {
               path: 'gl',
-              name: 'glProduct',
+              name: '管理产品留言',
               component: glProduct,
               meta: { title: '管理产品留言', noCache: true },
             },
@@ -314,7 +314,7 @@ const router = new Router({
         // 商铺管理
         {
           path: '/muban',
-          name: 'muban',
+          name: '商铺模板管理',
           component: muban,
           meta: { title: '商铺模板管理', noCache: true },
         },
@@ -327,7 +327,7 @@ const router = new Router({
           children: [
             {
               path: 'xjlj',
-              name: 'Xjlj',
+              name: '商铺友情链接',
               component: Xjlj,
               meta: { title: '商铺友情链接', noCache: true },
             }
@@ -341,7 +341,7 @@ const router = new Router({
           children: [
             {
               path: 'glBanner',
-              name: 'Glbanner',
+              name: '商铺banner管理',
               component: glBanner,
               meta: { title: '商铺banner管理', noCache: true },
             },
@@ -362,7 +362,7 @@ const router = new Router({
           children: [
             {
               path: 'jb',
-              name: 'Hyjb',
+              name: '修改会员信息',
               component: Hyjb,
               meta: { title: '修改会员信息', noCache: true },
             },
@@ -380,13 +380,13 @@ const router = new Router({
         },
         {
           path: '/mima',
-          name: 'mima',
+          name: '修改登录密码',
           component: mima,
           meta: { title: '修改登录密码', noCache: true },
         },
         {
           path: '/erji',
-          name: 'erji',
+          name: '管理二级域名',
           component: erji,
           meta: { title: '管理二级域名', noCache: true },
         }

@@ -47,7 +47,7 @@ export default {
   mounted() {
     getXiaoXi().then(res => {
       if (res.code == 1) {
-        console.log(res.data);
+        // console.log(res.data);
         this.xiaoXi = res.data;
       }
     });

@@ -147,14 +147,14 @@ export default {
   created() {
     axios.get("home/weituo").then(res => {
       if (res.code == 1) {
-        console.log(res.data);
+        // console.log(res.data);
         this.weituo = res.data;
       }
     });
   },
   mounted() {
     getWeiTuo().then(res => {
-       console.log(res.data);
+      //  console.log(res.data);
       if (res.code == 1) {
         // console.log(res.data);
         this.weituo = res.data;

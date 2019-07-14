@@ -9,7 +9,7 @@
     </p>
     <header>
       <div class="search_wrap">
-        <input class="search" v-model="search" placeholder="查找产品留言" />
+        <input class="search" v-model="search" placeholder="查找公司留言" />
         <span>
           <i class="el-iconfont el-icon-search"></i>
         </span>
@@ -145,7 +145,7 @@ export default {
   methods: {
     getTableData() {
       axios.get("qgxx/table").then(res => {
-        console.log(res.data);
+        // console.log(res.data);
         this.tableData = res.data.data;
       });
     },

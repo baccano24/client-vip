@@ -33,7 +33,7 @@
               :key="cindex"
             >
               <el-menu-item
-                :index='citem.path'
+                :index='citem.index'
                 style="padding-left:55px;height:40px;line-height:40px;"
               >{{citem.name}}</el-menu-item>
             </el-menu-item-group>
@@ -56,13 +56,13 @@ export default {
           icon: "icon-shuangsechangyongtubiao-",
           name: "信息发布管理",
           children: [
-            { path: "/cpxx", name: "产品信息发布管理" },
-            { path: "/qgxx", name: "求购信息发布管理" },
-            { path: "/zpxx", name: "招聘信息发布管理" },
-            { path: "/jmxx", name: "加盟招商发布管理" },
-            { path: "/xcxx", name: "相册信息发布管理" },
-            { path: "/zsxx", name: "证书信息发布管理" },
-            { path: "/qyxx", name: "企业新闻发布管理" }
+            { index: "/cpxx", name: "产品信息发布管理" },
+            { index: "/qgxx", name: "求购信息发布管理" },
+            { index: "/zpxx", name: "招聘信息发布管理" },
+            { index: "/jmxx", name: "加盟招商发布管理" },
+            { index: "/xcxx", name: "相册信息发布管理" },
+            { index: "/zsxx", name: "证书信息发布管理" },
+            { index: "/qyxx", name: "企业新闻发布管理" }
           ]
         },
         {
@@ -70,8 +70,8 @@ export default {
           icon: "icon-jilu",
           name: "留言管理",
           children: [
-            { path: "/company", name: "管理公司留言" },
-            { path: "/product", name: "管理产品留言" }
+            { index: "/company", name: "管理公司留言" },
+            { index: "/product", name: "管理产品留言" }
           ]
         },
         {
@@ -79,9 +79,9 @@ export default {
           icon: "icon-shangpuguanliicon",
           name: "商铺管理",
           children: [
-            { path: "/muban", name: "商铺模板管理" },
-            { path: "/lianjie/xjlj", name: "商铺友情链接" },
-            { path: "/banner", name: "商铺banner管理" },
+            { index: "/muban", name: "商铺模板管理" },
+            { index: "/lianjie/xjlj", name: "商铺友情链接" },
+            { index: "/banner", name: "商铺banner管理" },
           ]
         },
         {
@@ -89,9 +89,9 @@ export default {
           icon: "icon-huiyuan",
           name: "会员信息管理",
           children: [
-            { path: "/xghy", name: "修改会员信息" },
-            { path: "/mima", name: "修改登录密码" },
-            { path: "/erji", name: "管理二级域名" },
+            { index: "/xghy", name: "修改会员信息" },
+            { index: "/mima", name: "修改登录密码" },
+            { index: "/erji", name: "管理二级域名" },
           ]
         }
       ]
@@ -193,6 +193,7 @@ export default {
       }
     }
   },
+  
   methods: {
     
     handleOpen(key, keyPath) {

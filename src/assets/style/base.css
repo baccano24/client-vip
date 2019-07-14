@@ -440,7 +440,6 @@ input{
 }
 .el-form--inline .el-form-item__label{
     width: 100px;
-    text-align: right;
   }
 .expanded .el-table__expand-column{
     width: 15px;
@@ -452,3 +451,11 @@ input{
     line-height: 30px;
   }
 
+.tabsView .el-tabs__item{
+padding: 0 20px;
+}
+.tabsView .el-tabs__item{
+    line-height: 30px;
+    height: 30px;
+    
+}

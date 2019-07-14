@@ -146,7 +146,7 @@ export default {
   methods: {
     getShowData(){
       axios.get("cpxx/table").then(res => {
-        console.log(res.data);
+        // console.log(res.data);
         this.tableData = res.data.data;
       });
     },
