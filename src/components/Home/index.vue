@@ -72,6 +72,7 @@ h1 {
   background: #fff;
   padding-left: 20px;
   box-sizing: border-box;
+  margin-bottom: 20px;
 }
 .home .titl {
   display: block;

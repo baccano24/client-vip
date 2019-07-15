@@ -109,10 +109,12 @@ const router = new Router({
             },
             {
               path: 'gl',
+              name: '产品信息管理',
               component: Glxx
             },
             {
               path: 'xg/id=:id',
+              name: '产品信息修改',
               component: Xgxx,
               props: true
             }
@@ -132,10 +134,12 @@ const router = new Router({
             },
             {
               path: 'gl',
+              name: '求购信息管理',
               component: Glqg
             },
             {
               path: 'xg/id=:id',
+              name: '求购信息修改',
               component: Xgqg,
               props: true
             }
@@ -155,10 +159,12 @@ const router = new Router({
             },
             {
               path: 'gl',
+              name: '招聘信息管理',
               component: Glzp
             },
             {
               path: 'xg/id=:id',
+              name: '招聘信息修改',
               component: Xgzp,
               props: true
             }
@@ -178,11 +184,12 @@ const router = new Router({
             },
             {
               path: 'gl',
-
+              name: '加盟信息管理',
               component: Gljm
             },
             {
               path: 'xg/id=:id',
+              name: '加盟信息修改',
               component: Xgjm,
               props: true
             }
@@ -202,10 +209,12 @@ const router = new Router({
             },
             {
               path: 'gl',
+              name: '相册信息管理',
               component: Glxc
             },
             {
               path: 'xg/id=:id',
+              name: '相册信息修改',
               component: Xgxc,
               props: true
             }
@@ -224,10 +233,12 @@ const router = new Router({
             },
             {
               path: 'gl',
+              name: '证书信息管理',
               component: Glzs
             },
             {
               path: 'xg/id=:id',
+              name: '证书信息修改',
               component: Xgzs,
               props: true
             }
@@ -246,10 +257,12 @@ const router = new Router({
             },
             {
               path: 'gl',
+              name: '企业信息管理',
               component: Glqy
             },
             {
               path: 'xg/id=:id',
+              name: '企业信息修改',
               component: Xgqy,
               props: true
             }
@@ -264,12 +277,13 @@ const router = new Router({
           children: [
             {
               path: 'gl',
-              name: '管理公司留言',
+              name: '公司留言管理',
               component: glCompany,
-              meta: { title: '管理公司留言', noCache: true },
+              meta: { title: '公司留言管理', noCache: true },
             },
             {
               path: 'detail/id=:id',
+              name: '公司留言详情',
               component: com_detail,
               props: true
             }
@@ -283,12 +297,13 @@ const router = new Router({
           children: [
             {
               path: 'gl',
-              name: '管理产品留言',
+              name: '产品留言管理',
               component: glProduct,
-              meta: { title: '管理产品留言', noCache: true },
+              meta: { title: '产品留言管理', noCache: true },
             },
             {
               path: 'detail/id=:id',
+              name: '产品留言详情',
               component: pro_detail,
               props: true
             }
@@ -330,6 +345,7 @@ const router = new Router({
             },
             {
               path: 'id=:id',
+              name: '商铺banner修改',
               component: XgBanner,
               props: true
             }
@@ -344,18 +360,18 @@ const router = new Router({
           children: [
             {
               path: 'jb',
-              name: '修改会员信息',
+              name: '修改会员基本信息',
               component: Hyjb,
-              meta: { title: '修改会员信息', noCache: true },
+              meta: { title: '修改会员基本信息', noCache: true },
             },
             {
               path: 'xx',
-
+              name: '修改会员详情信息',
               component: Hyxx
             },
             {
               path: 'lianxi',
-
+              name: '修改会员联系方式',
               component: Hylx
             }
           ]
