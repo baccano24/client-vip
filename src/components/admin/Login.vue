@@ -1,50 +1,52 @@
 <template>
-  <div class="login">
-    <el-form
-      :model="loginUser"
-      status-icon
-      :rules="rules"
-      ref="loginUser"
-      label-width="100px"
-      class="register_con"
-    >
-      <h1>登录页面</h1>
-      <el-form-item label="用户名：" prop="name">
-        <el-input type="text" v-model="loginUser.name" autocomplete="off"></el-input>
-      </el-form-item>
-      <el-form-item label="密码：" prop="pass">
-        <el-input type="password" v-model="loginUser.pass" autocomplete="off"></el-input>
-      </el-form-item>
-      <el-form-item label="选择身份" prop="region">
-        <el-select v-model="loginUser.region" placeholder="请选择用户身份">
-          <el-option label="管理员" value="guanliyuan"></el-option>
-          <el-option label="员工" value="yuangong"></el-option>
-        </el-select>
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="submitForm('loginUser')" style="margin-left:70px;">登录</el-button>
-      </el-form-item>
-      <b @click="goTo('/register')">去注册</b>
-    </el-form>
-    <vue-particles
-      style="height:99%"
-      class="bg_login"
-      color="#fff"
-      :particleOpacity="0.7"
-      :particlesNumber="80"
-      shapeType="circle"
-      :particleSize="4"
-      linesColor="#fff"
-      :linesWidth="1"
-      :lineLinked="true"
-      :lineOpacity="0.4"
-      :linesDistance="150"
-      :moveSpeed="3"
-      :hoverEffect="true"
-      hoverMode="grab"
-      :clickEffect="true"
-      clickMode="push"
-    ></vue-particles>
+  <div class="login_wrap">
+    <div class="login">
+      <el-form
+        :model="loginUser"
+        status-icon
+        :rules="rules"
+        ref="loginUser"
+        label-width="100px"
+        class="register_con"
+      >
+        <h1>登录页面</h1>
+        <el-form-item label="用户名：" prop="name">
+          <el-input type="text" v-model="loginUser.name" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="密码：" prop="pass">
+          <el-input type="password" v-model="loginUser.pass" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="选择身份" prop="region">
+          <el-select v-model="loginUser.region" placeholder="请选择用户身份">
+            <el-option label="管理员" value="guanliyuan"></el-option>
+            <el-option label="员工" value="yuangong"></el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary" @click="submitForm('loginUser')" style="margin-left:70px;">登录</el-button>
+        </el-form-item>
+        <b @click="goTo('/register')">去注册</b>
+      </el-form>
+      <vue-particles
+        style="height:99%"
+        class="bg_login"
+        color="#fff"
+        :particleOpacity="0.7"
+        :particlesNumber="80"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#fff"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      ></vue-particles>
+    </div>
   </div>
 </template>
 
@@ -125,6 +127,16 @@ export default {
 </script>
 
 <style scoped>
+.login_wrap {
+  background: #333;
+  position: absolute;
+  top: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -2;
+}
 .register_con {
   /* margin: 100px auto; */
   width: 500px;
@@ -145,7 +157,7 @@ export default {
   text-align: center;
   margin-bottom: 20p;
 }
-.bg_login{
+.bg_login {
   position: absolute;
   top: 0;
   bottom: 0;

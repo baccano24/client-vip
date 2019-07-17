@@ -1,4 +1,5 @@
 <template>
+<div class="register_wrap">
   <div class="register">
     <el-form
       :model="registerUser"
@@ -33,7 +34,27 @@
       </el-form-item>
       <b @click="goTo('/login')">去登录</b>
     </el-form>
+    <vue-particles
+        style="height:99%"
+        class="bg_login"
+        color="#fff"
+        :particleOpacity="0.7"
+        :particlesNumber="80"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#fff"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      ></vue-particles>
   </div>
+</div>
 </template>
 
 <script>
@@ -128,10 +149,30 @@ export default {
   margin: 100px auto;
   width: 500px;
   padding: 10px;
-  background: yellowgreen;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
 }
 .register_con h1 {
   text-align: center;
   margin-bottom: 20px;
+}
+.bg_login {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+.register_wrap {
+  background: #333;
+  position: absolute;
+  top: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -2;
 }
 </style>

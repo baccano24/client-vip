@@ -5,10 +5,10 @@
       消息中心
       <span>
         <b style="color:#ff5b58;">【优惠】</b>
-        <span>111</span>
+        <!-- <span>111{{tableData.com_id}}</span> -->
       </span>
     </p>
-
+<!-- @click="init()" -->
     <el-form
       :model="ruleForm"
       :rules="rules"
@@ -16,6 +16,7 @@
       label-width="100px"
       class="fbqg-ruleForm"
       style="text-align: left;"
+      
     >
       <div class="guanjian_box">
         <el-form-item label="关键词一：" prop="guanjian1" class="guanjian">
@@ -117,6 +118,7 @@
 import axios from "axios";
 // Admin信息模拟api接口
 import { getAdmin } from "../../../api/admin_qg";
+import { getShowData } from "../../../api/tableData_detail";
 // 富文本编辑器
 import { quillEditor } from "vue-quill-editor";
 export default {
@@ -124,6 +126,7 @@ export default {
   components: {},
   data() {
     return {
+      
       // 上传图片
       fileList: [],
       // Admin
@@ -149,6 +152,9 @@ export default {
         delivery: false,
         // 联系人
         contact: ""
+      },
+      props:{
+        "id":String
       },
       // 表单验证
       rules: {
@@ -225,8 +231,23 @@ export default {
       // console.log(res.data);
       this.admin = res.data;
     });
+   
+    this.getShowData();
+ 
+  },
+  mounted(){
+     console.log(this.$route.params.id)
+     var that =this;
+     var id = that.$route.params && that.$route.params.id;
+     const url = `qgxx/table/${id}.html`;
+     that.$axios.get(url)
+     .then((res)=>{
+      console.log(res.data);
+      ruleForm = res.data;
+ })
   },
   methods: {
+    
     handleClick(tab, event) {
       //   console.log(tab, event);
     },

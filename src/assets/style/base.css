@@ -440,6 +440,7 @@ input{
 }
 .el-form--inline .el-form-item__label{
     width: 100px;
+    text-align: right;
   }
 .expanded .el-table__expand-column{
     width: 15px;

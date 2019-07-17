@@ -59,7 +59,7 @@ select {
 }
 body {
   font: 12px "微软雅黑", "Arial Narrow", HELVETICA;
-  background: #333;
+  background: #fff;
   -webkit-text-size-adjust: 100%;
   color: #6583a7;
 }

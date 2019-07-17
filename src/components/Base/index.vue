@@ -68,7 +68,6 @@ export default {
       // console.log("tab",tab);
       // console.log('active',this.activeIndex);
       this.$router.push({ path: this.activeIndex });
-      console.log(1)
     },
     //移除tab标签
     tabRemove(targetName) {

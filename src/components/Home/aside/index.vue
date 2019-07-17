@@ -188,7 +188,7 @@ header h2 span {
   font-weight: 100;
   color: #0279f2;
   font-size: 14px;
-  margin-left: 10px;
+  margin-left: 9px;
   cursor: pointer;
 }
 #wt_ul {

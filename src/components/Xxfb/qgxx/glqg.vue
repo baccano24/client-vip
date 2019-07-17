@@ -131,10 +131,11 @@ export default {
     // 修改按钮跳转
     goTo(path) {
       this.$router.replace(path);
+      
     },
     // 操作
     handleEdit(index, row) {
-      console.log(index, row);
+      // console.log(index, row);
     },
     handleDelete(index, row) {
       this.tableData.splice(index, 1);
